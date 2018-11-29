@@ -1,3 +1,8 @@
+/**
+ * CustomHttp - класс для создания объекта взаимодействия с сервером
+ * @param {Text} url - адрес запроса
+ * @param {Function} callback - обработчик принимающий ответ сервера
+ */
 class CustomHttp {
     get(url, callback) {
         const xhr = new XMLHttpRequest();

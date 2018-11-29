@@ -11,6 +11,7 @@ class NewsUI {
 
     clearContainer() {
         this._container.innerHTML = "";
+        queryForm.reset();
     }
 
     _newsTemplate({urlToImage, url, title, description}) {
