@@ -17,7 +17,6 @@ class NewsService {
         this._http.get(`${this._url}/top-headlines?country=${country}&category=${category}&apiKey=${this._key}`, callback);
     }
     fetchNewsByQuery(callback, query) {
-        console.log(query)
         this._http.get(`${this._url}/everything?q=${query}&apiKey=${this._key}`, callback);
     }
 }

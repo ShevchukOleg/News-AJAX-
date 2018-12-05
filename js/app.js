@@ -35,14 +35,15 @@ const getQueryHandler = (e) => {
     e.preventDefault();
     const query = queryTheme.value;
 
-    if(query.length > 1){
+    if(query.length == 0){
+        alert("Введите корректный запрос");    
+    } else {
         newsService.fetchNewsByQuery((result) => {
             const { articles, totalResults } = result;
+            if(totalResults == 0) alert("Нет данных по введенному запросу.")
             newsUI.clearContainer();
             articles.forEach( news => newsUI.addNews(news));
-        }, query);  
-    } else {
-        alert("Введите корректный запрос")
+        }, query);
     }
 }
 
