@@ -16,10 +16,10 @@ class NewsUI {
 
     _newsTemplate({urlToImage, url, title, description}) {
         return `
-        <div class="col s12 l6"> 
+        <div class="col s12 l6">
             <div class="card">
                 <div class="card-image">
-                    <img src="${urlToImage || this._defaultImage}">
+                    <img class ="newsImg" src="${urlToImage || this._defaultImage}">
                 </div>
                 <div class="card-content">
                     <span class="card-title">${title}</span>
@@ -33,4 +33,3 @@ class NewsUI {
         `;
     }
 }
-

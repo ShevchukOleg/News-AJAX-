@@ -1,3 +1,7 @@
 .TextToCenter {
   text-align: center;
 }
+
+.newsImg {
+  height: auto;
+}
